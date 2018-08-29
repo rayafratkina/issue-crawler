@@ -58,6 +58,9 @@
         "assignees": {
           "type": "keyword"
         },
+        "reviewers": {
+          "type": "keyword"
+        },
         "is_pullrequest": {
           "type": "boolean"
         },
