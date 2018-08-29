@@ -53,6 +53,7 @@ function convertIssue(owner, repo, raw) {
 		labels: raw.labels.map(label => label.name),
 		is_pullrequest: !!raw.pull_request,
 		assignees: !raw.assignees ? null : raw.assignees.map(a => a.login),
+		reviewers: !raw.reviewers ? null : raw.reviewers.map(a => a.login),
 		reactions: !raw.reactions ? null : {
 			total: raw.reactions.total_count,
 			upVote: raw.reactions['+1'],
